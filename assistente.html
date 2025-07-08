@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual - Clínica de Estética</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assistente.css">
+</head>
+<body>
+    <!-- Container principal do assistente -->
+    <div class="assistente-container" id="assistente">
+        <!-- Botão flutuante que abre o chat -->
+        <button class="assistente-btn" id="assistente-btn" aria-label="Abrir assistente virtual" tabindex="0" role="button">
+            <!-- Ícone do robô -->
+            <div class="robo-face">
+                <div class="olhos">
+                    <div class="olho"></div>
+                    <div class="olho"></div>
+                </div>
+                <div class="boca" id="boca"></div>
+            </div>
+        </button>
+        <!-- Caixa de chat que aparece ao clicar no botão (inicialmente escondida) -->
+        <div class="chat-box" id="chat-box">
+            <!-- Cabeçalho do chat -->
+            <div class="chat-header">
+                <h3><i class="fas fa-spa" aria-hidden="true"></i> Assistente Beleza</h3>
+                <div class="acoes">
+                    <button id="fechar-btn" aria-label="Fechar chat" tabindex="0" role="button"><i class="fas fa-times" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <!-- Formulário de entrada de nome -->
+            <div class="name-input-container" id="name-input-container">
+                <p>Antes de começarmos, como posso te chamar?</p>
+                <input type="text" id="name-input" placeholder="Seu nome" aria-label="Digite seu nome">
+                <button id="confirm-name-btn" tabindex="0" role="button">Confirmar</button>
+            </div>
+            
+            <!-- Área de mensagens do chat -->
+            <div class="chat-messages" id="chat-messages"></div>
+            <!-- Área de sugestões de respostas rápidas -->
+            <div class="quick-actions" id="quick-actions"></div>
+            <!-- Área para opções adicionais ("Mais opções")-->
+            <div class="more-options-container" id="more-options"></div>
+            <!-- Área de entrada de mensagens -->
+            <div class="chat-input">
+                <input type="text" id="mensagem-input" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem" tabindex="0">
+                <button id="enviar-btn" aria-label="Enviar mensagem" tabindex="0" role="button"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Sons do assistente -->
+    <audio id="som-clique" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-box-check-1120.mp3"></audio>
+    <audio id="som-notificacao" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3"></audio>
+
+    <script src="assistente.js"></script>
+    
+    <!-- Marca d'água para identificar o autor do código -->
+    <div class="ribbon-watermark">
+      <svg viewBox="0 0 20 20" width="20" height="20">
+        <path d="M10 15L5 10L10 5L15 10Z" fill="#FFB6C1" opacity="0.7"/>
+      </svg>
+      <span>Camila Rosal</span>
+    </div>
+</body>
+</html>
